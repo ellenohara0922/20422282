@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://7iy38smr1dic"]
+
+[ext_resource type="PackedScene" uid="uid://dqavktnc7upc1" path="res://ItemsRing/ItemRings.glb" id="1_gyvg6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fsv2d"]
+radius = 2.44086
+
+[node name="outer_layer_items" type="StaticBody3D"]
+
+[node name="ItemRings" parent="." instance=ExtResource("1_gyvg6")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
+shape = SubResource("SphereShape3D_fsv2d")
