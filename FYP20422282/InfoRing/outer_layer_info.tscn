@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b05vacljcaf6x"]
+
+[ext_resource type="PackedScene" uid="uid://dbfy05gca83rb" path="res://InfoRing/info2.glb" id="1_2a2h5"]
+
+[node name="outer_layer_info" type="StaticBody3D"]
+
+[node name="info2" parent="." instance=ExtResource("1_2a2h5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
