@@ -1,0 +1,78 @@
+[gd_scene load_steps=18 format=3 uid="uid://ik1d1qq8pnsj"]
+
+[ext_resource type="PackedScene" uid="uid://bcmu7k23er1vf" path="res://FoodsRing/outer_layer_food.tscn" id="1_6ud7r"]
+[ext_resource type="PackedScene" uid="uid://bnspge75cu6sa" path="res://treasure_chest.tscn" id="2_lhl2y"]
+[ext_resource type="Script" path="res://treasure_chest.gd" id="3_6t8ry"]
+[ext_resource type="PackedScene" uid="uid://7iy38smr1dic" path="res://ItemsRing/outer_layer_item.tscn" id="4_l0sm8"]
+[ext_resource type="PackedScene" uid="uid://6uk3mchoelol" path="res://AnimalsRing/outer_layer_animal.tscn" id="5_lyrhc"]
+[ext_resource type="PackedScene" uid="uid://bf6invioel73w" path="res://FoodsRing/cupcake.tscn" id="6_4f3lq"]
+[ext_resource type="Script" path="res://FoodsRing/cupcake.gd" id="7_h7rfp"]
+[ext_resource type="PackedScene" uid="uid://3p8enhvxu2j5" path="res://FoodsRing/pizza.tscn" id="8_46mcs"]
+[ext_resource type="Script" path="res://FoodsRing/pizza.gd" id="9_cj88g"]
+[ext_resource type="PackedScene" uid="uid://bw6da6k8uegf" path="res://FoodsRing/donut_icon.tscn" id="10_7c30m"]
+[ext_resource type="Script" path="res://FoodsRing/donut_icon.gd" id="11_21e4r"]
+[ext_resource type="PackedScene" uid="uid://3d7dfuj126ag" path="res://AnimalsRing/paw.tscn" id="12_r0fme"]
+[ext_resource type="Script" path="res://AnimalsRing/paw.gd" id="13_37xuk"]
+[ext_resource type="PackedScene" uid="uid://duq7myb5ooik7" path="res://FoodsRing/burger_icon.tscn" id="14_14eai"]
+[ext_resource type="Script" path="res://FoodsRing/burger_icon.gd" id="15_pmk20"]
+[ext_resource type="PackedScene" uid="uid://0kold2tdu82r" path="res://InnerRing/inner_layer.tscn" id="16_awdug"]
+[ext_resource type="Script" path="res://InnerRing/inner_layer.gd" id="17_k4yqf"]
+
+[node name="Menu" type="Node3D"]
+
+[node name="OuterLayerFood" parent="." instance=ExtResource("1_6ud7r")]
+transform = Transform3D(1, 0, 0, 0, -0.202497, -0.979283, 0, 0.979283, -0.202497, 0, 2.34884, -2.27055)
+visible = false
+
+[node name="TreasureChest" parent="." instance=ExtResource("2_lhl2y")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.337, -2)
+visible = false
+collision_layer = 5242881
+collision_mask = 5242881
+script = ExtResource("3_6t8ry")
+
+[node name="outer_layer_items" parent="." instance=ExtResource("4_l0sm8")]
+transform = Transform3D(0.916045, 0, 0, 0, 0.916045, 0, 0, 0, 0.916045, 0, 0, 0)
+visible = false
+
+[node name="outer_layer_animal" parent="." instance=ExtResource("5_lyrhc")]
+visible = false
+
+[node name="cupcake2" parent="." groups=["food_collision_shapes"] instance=ExtResource("6_4f3lq")]
+transform = Transform3D(1, 0, 0, 0, -0.202787, -0.979223, 0, 0.979223, -0.202787, 0, 2.349, -2.271)
+visible = false
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("7_h7rfp")
+
+[node name="Pizza" parent="." groups=["food_collision_shapes"] instance=ExtResource("8_46mcs")]
+transform = Transform3D(1, 0, 0, 0, -0.142318, -0.989821, 0, 0.989821, -0.142318, 0.0269844, 2.33446, -2.10272)
+visible = false
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("9_cj88g")
+
+[node name="donut_icon" parent="." groups=["food_collision_shapes"] instance=ExtResource("10_7c30m")]
+transform = Transform3D(1, 0, 0, 0, 0.227127, 0.973865, 0, -0.973865, 0.227127, 0.00874668, 1.2283, -2.38685)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("11_21e4r")
+
+[node name="paw" parent="." instance=ExtResource("12_r0fme")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.337, -2.314)
+visible = false
+script = ExtResource("13_37xuk")
+
+[node name="Food" type="Node3D" parent="." groups=["food_collision_shapes"]]
+
+[node name="BurgerIcon" parent="Food" groups=["food_collision_shapes"] instance=ExtResource("14_14eai")]
+transform = Transform3D(1, 0, 0, 0, 0.201112, 0.979568, 0, -0.979568, 0.201112, -0.00772044, 3.63059, -1.95131)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("15_pmk20")
+
+[node name="InnerLayer" parent="." instance=ExtResource("16_awdug")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.33657, -2.31687)
+collision_layer = 5242881
+collision_mask = 5242881
+script = ExtResource("17_k4yqf")

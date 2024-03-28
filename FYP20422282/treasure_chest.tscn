@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnspge75cu6sa"]
+
+[ext_resource type="PackedScene" uid="uid://cqyc6aca7ujxs" path="res://InnerRing/innerring_0.1.glb" id="1_tmrag"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gy026"]
+size = Vector3(0.84, 0.0874634, 0.855)
+
+[node name="TreasureChest" type="StaticBody3D"]
+
+[node name="innerring_0_1" parent="." instance=ExtResource("1_tmrag")]
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.456, 0.0574646, -0.451)
+shape = SubResource("BoxShape3D_gy026")

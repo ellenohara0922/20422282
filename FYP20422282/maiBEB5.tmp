@@ -1,0 +1,217 @@
+[gd_scene load_steps=45 format=3 uid="uid://dg8848v2t80bh"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_6osw7"]
+[ext_resource type="PackedScene" uid="uid://bcmu7k23er1vf" path="res://FoodsRing/outer_layer_food.tscn" id="2_n7jmn"]
+[ext_resource type="PackedScene" uid="uid://dl61japkfqrvx" path="res://xr_origin_3d.tscn" id="2_xtkjn"]
+[ext_resource type="PackedScene" uid="uid://7iy38smr1dic" path="res://ItemsRing/outer_layer_item.tscn" id="3_12vg8"]
+[ext_resource type="PackedScene" uid="uid://0kold2tdu82r" path="res://InnerRing/inner_layer.tscn" id="3_xndhc"]
+[ext_resource type="Script" path="res://InnerRing/inner_layer.gd" id="4_mo1sk"]
+[ext_resource type="PackedScene" uid="uid://dthoinlihfmf7" path="res://menu_items/food/food_scenes/cupcake.tscn" id="5_bb5e8"]
+[ext_resource type="PackedScene" uid="uid://bnspge75cu6sa" path="res://treasure_chest.tscn" id="6_78vve"]
+[ext_resource type="PackedScene" uid="uid://f7bnn7dh4pkk" path="res://menu_items/food/food_scenes/pizza.tscn" id="6_rtbn3"]
+[ext_resource type="Script" path="res://treasure_chest.gd" id="7_4hbg5"]
+[ext_resource type="PackedScene" uid="uid://cu0uo4n7gyf2s" path="res://menu_items/food/food_scenes/burger.tscn" id="7_6ot47"]
+[ext_resource type="PackedScene" uid="uid://dcvq0wl2n038d" path="res://menu_items/food/food_scenes/donut.tscn" id="8_d7jkv"]
+[ext_resource type="PackedScene" uid="uid://d10rrxoaypme7" path="res://menu_items/food/food_scenes/icecream.tscn" id="9_u4hfj"]
+[ext_resource type="PackedScene" uid="uid://6uk3mchoelol" path="res://AnimalsRing/outer_layer_animal.tscn" id="9_vgai3"]
+[ext_resource type="PackedScene" uid="uid://hkdn6uueotjg" path="res://menu_items/food/food_scenes/hotdog.tscn" id="10_bonk3"]
+[ext_resource type="PackedScene" uid="uid://3d7dfuj126ag" path="res://AnimalsRing/paw.tscn" id="10_j4frv"]
+[ext_resource type="PackedScene" uid="uid://3e02ycem5qhg" path="res://menu_items/food/food_scenes/soda.tscn" id="11_arm32"]
+[ext_resource type="Script" path="res://AnimalsRing/paw.gd" id="11_tt2xo"]
+[ext_resource type="PackedScene" uid="uid://cbyo47qim7fmj" path="res://menu_items/food/food_scenes/waffle.tscn" id="12_wnsbn"]
+[ext_resource type="PackedScene" uid="uid://5yjd8xhw3dja" path="res://table.tscn" id="13_n1uxp"]
+[ext_resource type="PackedScene" uid="uid://bf6invioel73w" path="res://FoodsRing/cupcake.tscn" id="14_e7nxe"]
+[ext_resource type="Script" path="res://FoodsRing/cupcake.gd" id="15_j843w"]
+[ext_resource type="PackedScene" uid="uid://3p8enhvxu2j5" path="res://FoodsRing/pizza.tscn" id="16_lc7kw"]
+[ext_resource type="Script" path="res://FoodsRing/pizza.gd" id="17_f7nev"]
+[ext_resource type="PackedScene" uid="uid://duq7myb5ooik7" path="res://FoodsRing/burger_icon.tscn" id="19_u2ofv"]
+[ext_resource type="Script" path="res://FoodsRing/burger_icon.gd" id="20_bt505"]
+[ext_resource type="PackedScene" uid="uid://bw6da6k8uegf" path="res://FoodsRing/donut_icon.tscn" id="22_3mu0p"]
+[ext_resource type="Script" path="res://FoodsRing/donut_icon.gd" id="23_21ifg"]
+[ext_resource type="PackedScene" uid="uid://culqmg1trnvbo" path="res://CoffeeShop/coffeeshop.glb" id="25_ohdrm"]
+[ext_resource type="PackedScene" uid="uid://obu1gbcqghjv" path="res://FoodsRing/icecream_icon.tscn" id="26_2gih4"]
+[ext_resource type="Script" path="res://FoodsRing/icecream_icon.gd" id="27_7fetf"]
+[ext_resource type="PackedScene" uid="uid://d2fqgj2xxpoib" path="res://FoodsRing/hotdog_icon.tscn" id="29_5jjp5"]
+[ext_resource type="Script" path="res://FoodsRing/hotdog_icon.gd" id="30_ne7vf"]
+[ext_resource type="PackedScene" uid="uid://dlqqthxdriivv" path="res://FoodsRing/soda_icon.tscn" id="32_8kp05"]
+[ext_resource type="Script" path="res://FoodsRing/soda_icon.gd" id="33_hxkbc"]
+[ext_resource type="PackedScene" uid="uid://cv5pu6beg5221" path="res://FoodsRing/waffle_icon.tscn" id="35_vypk6"]
+[ext_resource type="Script" path="res://FoodsRing/waffle_icon.gd" id="36_36r06"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ybk0"]
+size = Vector3(30.1912, 1.74158, 30.256)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lm8t0"]
+size = Vector3(5.32153, 0.183716, 5.60706)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ehxy"]
+size = Vector3(5.35498, 0.138687, 5.56421)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_88qb6"]
+size = Vector3(2.31543, 0.333344, 2.37994)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wtee"]
+size = Vector3(2.32709, 0.173828, 2.32654)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2dbb3"]
+size = Vector3(2.28363, 0.314941, 2.26904)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pq36a"]
+size = Vector3(5.19922, 0.212524, 20.5265)
+
+[node name="Main" type="Node3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.687603, 0)
+script = ExtResource("1_6osw7")
+outer_layer_food = ExtResource("2_n7jmn")
+outer_layer_item = ExtResource("3_12vg8")
+outer_layer_animal = ExtResource("9_vgai3")
+cupcake = ExtResource("5_bb5e8")
+pizza = ExtResource("6_rtbn3")
+burger = ExtResource("7_6ot47")
+donut = ExtResource("8_d7jkv")
+icecream = ExtResource("9_u4hfj")
+hotdog = ExtResource("10_bonk3")
+soda = ExtResource("11_arm32")
+waffle = ExtResource("12_wnsbn")
+
+[node name="Player" parent="." instance=ExtResource("2_xtkjn")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -3.36094, 4.63853)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.767423, 0.641142, 0, -0.641142, 0.767423, 0, 3.66715, 0)
+
+[node name="table" parent="." instance=ExtResource("13_n1uxp")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 80.2794, -2.70848, 3.25964)
+visible = false
+
+[node name="coffeeshop" parent="." instance=ExtResource("25_ohdrm")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -3.45586, 0)
+
+[node name="floorCollision" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.240826, -4.21935, -0.0166167)
+shape = SubResource("BoxShape3D_0ybk0")
+
+[node name="tablesCollisions" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.24312, 0.475382, 1.07528)
+
+[node name="table1" type="CollisionShape3D" parent="tablesCollisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.134516, -0.0672395, 7.30675)
+shape = SubResource("BoxShape3D_lm8t0")
+
+[node name="table2" type="CollisionShape3D" parent="tablesCollisions"]
+shape = SubResource("BoxShape3D_2ehxy")
+
+[node name="chairCollisions" type="StaticBody3D" parent="."]
+
+[node name="chair1" type="CollisionShape3D" parent="chairCollisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.93828, -0.688691, 12.7228)
+shape = SubResource("BoxShape3D_88qb6")
+
+[node name="chair2" type="CollisionShape3D" parent="chairCollisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3178, -0.605397, 9.02259)
+shape = SubResource("BoxShape3D_5wtee")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="chairCollisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78648, -0.668736, 1.55346)
+shape = SubResource("BoxShape3D_2dbb3")
+
+[node name="counterCollisions" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.24312, 0.475382, 1.07528)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="counterCollisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3241, 0.36261, 3.47096)
+shape = SubResource("BoxShape3D_pq36a")
+
+[node name="Menu" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="OuterLayerFood" parent="Menu" instance=ExtResource("2_n7jmn")]
+transform = Transform3D(1, 0, 0, 0, -0.202497, -0.979282, 0, 0.979282, -0.202497, 0, 2.38514, -2.25344)
+visible = false
+
+[node name="TreasureChest" parent="Menu" instance=ExtResource("6_78vve")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.337, -2)
+collision_layer = 5242881
+collision_mask = 5242881
+script = ExtResource("7_4hbg5")
+
+[node name="outer_layer_items" parent="Menu" instance=ExtResource("3_12vg8")]
+transform = Transform3D(0.916045, 0, 0, 0, -0.231185, -0.886393, 0, 0.886393, -0.231185, 0, 2.27676, -2.29429)
+visible = false
+
+[node name="outer_layer_animal" parent="Menu" instance=ExtResource("9_vgai3")]
+visible = false
+
+[node name="cupcake2" parent="Menu" groups=["food_collision_shapes"] instance=ExtResource("14_e7nxe")]
+transform = Transform3D(0.869141, 0.100291, 0.484288, 0.494564, -0.176251, -0.851083, 5.55112e-16, 0.979223, -0.202787, -0.785439, 2.50609, -2.32033)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("15_j843w")
+
+[node name="Pizza" parent="Menu" groups=["food_collision_shapes"] instance=ExtResource("16_lc7kw")]
+transform = Transform3D(1, 0, 0, 0, -0.142318, -0.989821, 0, 0.989821, -0.142318, 0.0269844, 2.33446, -2.10272)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("17_f7nev")
+
+[node name="donut_icon" parent="Menu" groups=["food_collision_shapes"] instance=ExtResource("22_3mu0p")]
+transform = Transform3D(1, 0, 0, 0, 0.227127, 0.973865, 0, -0.973865, 0.227127, 0.00874668, 1.2283, -2.38685)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("23_21ifg")
+
+[node name="paw" parent="Menu" instance=ExtResource("10_j4frv")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.337, -2.314)
+script = ExtResource("11_tt2xo")
+
+[node name="Food" type="Node3D" parent="Menu" groups=["food_collision_shapes"]]
+
+[node name="BurgerIcon" parent="Menu/Food" groups=["food_collision_shapes"] instance=ExtResource("19_u2ofv")]
+transform = Transform3D(1, 0, 0, 0, 0.201112, 0.979568, 0, -0.979568, 0.201112, -0.00772044, 3.63059, -1.95131)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("20_bt505")
+
+[node name="InnerLayer" parent="Menu" instance=ExtResource("3_xndhc")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.33657, -2.31687)
+collision_layer = 5242881
+collision_mask = 5242881
+script = ExtResource("4_mo1sk")
+
+[node name="Icecream" parent="Menu" groups=["food_collision_shapes"] instance=ExtResource("26_2gih4")]
+transform = Transform3D(1, 0, 0, 0, 0.226294, 0.974059, 0, -0.974059, 0.226294, 0, 1.02877, -2.41851)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("27_7fetf")
+
+[node name="hotdog_icon" parent="Menu" groups=["food_collision_shapes"] instance=ExtResource("29_5jjp5")]
+transform = Transform3D(1, 0, 0, 0, 0.18021, 0.983628, 0, -0.983628, 0.18021, 0.0341189, -0.808148, -2.78038)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("30_ne7vf")
+
+[node name="soda_icon" parent="Menu" groups=["food_collision_shapes"] instance=ExtResource("32_8kp05")]
+transform = Transform3D(1, 0, 0, 0, 0.247117, 0.968986, 0, -0.968986, 0.247117, -0.0132668, 3.7088, -1.80687)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("33_hxkbc")
+
+[node name="waffle_icon" parent="Menu" groups=["food_collision_shapes"] instance=ExtResource("35_vypk6")]
+transform = Transform3D(1, 0, 0, 0, 0.220493, 0.975389, 0, -0.975389, 0.220493, -0.0389421, 5.39726, -1.57043)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("36_36r06")
+
+[connection signal="label_clicked" from="Menu/TreasureChest" to="." method="_on_treasure_chest_label_clicked"]
+[connection signal="label_clicked" from="Menu/cupcake2" to="." method="_on_cupcake_2_label_clicked"]
+[connection signal="label_clicked" from="Menu/Pizza" to="." method="_on_pizza_label_clicked"]
+[connection signal="label_clicked" from="Menu/donut_icon" to="." method="_on_donut_icon_label_clicked"]
+[connection signal="label_clicked" from="Menu/paw" to="." method="_on_paw_label_clicked"]
+[connection signal="label_clicked" from="Menu/Food/BurgerIcon" to="." method="_on_burger_icon_label_clicked"]
+[connection signal="label_clicked" from="Menu/InnerLayer" to="." method="_on_inner_layer_label_clicked"]
+[connection signal="label_clicked" from="Menu/Icecream" to="." method="_on_icecream_label_clicked"]
+[connection signal="label_clicked" from="Menu/hotdog_icon" to="." method="_on_hotdog_icon_label_clicked"]
+[connection signal="label_clicked" from="Menu/soda_icon" to="." method="_on_soda_icon_label_clicked"]
+[connection signal="label_clicked" from="Menu/waffle_icon" to="." method="_on_waffle_icon_label_clicked"]

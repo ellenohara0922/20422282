@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://dl61japkfqrvx"]
+
+[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="1_t7bnb"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="2_n3not"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="3_whqvq"]
+[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="4_ugbsp"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_xsupc"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="6_dck2d"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="6_tc12e"]
+
+[node name="XROrigin3D" type="XROrigin3D"]
+
+[node name="LeftHand" type="XRController3D" parent="."]
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="LeftHand" instance=ExtResource("1_t7bnb")]
+
+[node name="MovementDirect" parent="LeftHand" instance=ExtResource("4_xsupc")]
+strafe = true
+
+[node name="RightHand" type="XRController3D" parent="."]
+tracker = &"right_hand"
+
+[node name="RightHand" parent="RightHand" instance=ExtResource("4_ugbsp")]
+
+[node name="FunctionPickup" parent="RightHand" instance=ExtResource("2_n3not")]
+
+[node name="MovementTurn" parent="RightHand" instance=ExtResource("6_tc12e")]
+turn_mode = 2
+
+[node name="FunctionPointer" parent="RightHand" instance=ExtResource("3_whqvq")]
+
+[node name="PlayerBody" parent="." instance=ExtResource("6_dck2d")]

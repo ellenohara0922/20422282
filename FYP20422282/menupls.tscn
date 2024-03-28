@@ -1,0 +1,107 @@
+[gd_scene load_steps=26 format=3 uid="uid://b8rog7fnc00w5"]
+
+[ext_resource type="PackedScene" uid="uid://bcmu7k23er1vf" path="res://FoodsRing/outer_layer_food.tscn" id="1_amyfv"]
+[ext_resource type="PackedScene" uid="uid://bnspge75cu6sa" path="res://treasure_chest.tscn" id="2_wkcu0"]
+[ext_resource type="Script" path="res://treasure_chest.gd" id="3_wcy8c"]
+[ext_resource type="PackedScene" uid="uid://7iy38smr1dic" path="res://ItemsRing/outer_layer_item.tscn" id="4_u7qdg"]
+[ext_resource type="PackedScene" uid="uid://6uk3mchoelol" path="res://AnimalsRing/outer_layer_animal.tscn" id="5_mvfjl"]
+[ext_resource type="PackedScene" uid="uid://bf6invioel73w" path="res://FoodsRing/cupcake.tscn" id="6_iae14"]
+[ext_resource type="Script" path="res://FoodsRing/cupcake.gd" id="7_o4k0v"]
+[ext_resource type="PackedScene" uid="uid://3p8enhvxu2j5" path="res://FoodsRing/pizza.tscn" id="8_m25q4"]
+[ext_resource type="Script" path="res://FoodsRing/pizza.gd" id="9_d84ue"]
+[ext_resource type="PackedScene" uid="uid://bw6da6k8uegf" path="res://FoodsRing/donut_icon.tscn" id="10_uh486"]
+[ext_resource type="Script" path="res://FoodsRing/donut_icon.gd" id="11_ueidp"]
+[ext_resource type="PackedScene" uid="uid://3d7dfuj126ag" path="res://AnimalsRing/paw.tscn" id="12_688q1"]
+[ext_resource type="Script" path="res://AnimalsRing/paw.gd" id="13_euj51"]
+[ext_resource type="PackedScene" uid="uid://duq7myb5ooik7" path="res://FoodsRing/burger_icon.tscn" id="14_bspqo"]
+[ext_resource type="Script" path="res://FoodsRing/burger_icon.gd" id="15_dc7ux"]
+[ext_resource type="PackedScene" uid="uid://0kold2tdu82r" path="res://InnerRing/inner_layer.tscn" id="16_wl15c"]
+[ext_resource type="Script" path="res://InnerRing/inner_layer.gd" id="17_xeaav"]
+[ext_resource type="PackedScene" uid="uid://obu1gbcqghjv" path="res://FoodsRing/icecream_icon.tscn" id="18_f36jn"]
+[ext_resource type="Script" path="res://FoodsRing/icecream_icon.gd" id="19_q05v8"]
+[ext_resource type="PackedScene" uid="uid://d2fqgj2xxpoib" path="res://FoodsRing/hotdog_icon.tscn" id="20_5su8v"]
+[ext_resource type="Script" path="res://FoodsRing/hotdog_icon.gd" id="21_4f8cx"]
+[ext_resource type="PackedScene" uid="uid://dlqqthxdriivv" path="res://FoodsRing/soda_icon.tscn" id="22_niqru"]
+[ext_resource type="Script" path="res://FoodsRing/soda_icon.gd" id="23_2q5j1"]
+[ext_resource type="PackedScene" uid="uid://cv5pu6beg5221" path="res://FoodsRing/waffle_icon.tscn" id="24_8ne78"]
+[ext_resource type="Script" path="res://FoodsRing/waffle_icon.gd" id="25_6b48u"]
+
+[node name="Menu" type="Node3D"]
+
+[node name="OuterLayerFood" parent="." instance=ExtResource("1_amyfv")]
+transform = Transform3D(1, 0, 0, 0, -0.202497, -0.979283, 0, 0.979283, -0.202497, 0, 2.34884, -2.27055)
+visible = false
+
+[node name="TreasureChest" parent="." instance=ExtResource("2_wkcu0")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.337, -2)
+visible = false
+collision_layer = 5242881
+collision_mask = 5242881
+script = ExtResource("3_wcy8c")
+
+[node name="outer_layer_items" parent="." instance=ExtResource("4_u7qdg")]
+transform = Transform3D(0.916045, 0, 0, 0, 0.916045, 0, 0, 0, 0.916045, 0, 0, 0)
+visible = false
+
+[node name="outer_layer_animal" parent="." instance=ExtResource("5_mvfjl")]
+visible = false
+
+[node name="cupcake2" parent="." groups=["food_collision_shapes"] instance=ExtResource("6_iae14")]
+transform = Transform3D(0.869141, 0.100291, 0.484288, 0.494564, -0.176251, -0.851083, 5.55112e-16, 0.979223, -0.202787, -0.785439, 2.50609, -2.32033)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("7_o4k0v")
+
+[node name="Pizza" parent="." groups=["food_collision_shapes"] instance=ExtResource("8_m25q4")]
+transform = Transform3D(1, 0, 0, 0, -0.142318, -0.989821, 0, 0.989821, -0.142318, 0.0269844, 2.33446, -2.10272)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("9_d84ue")
+
+[node name="donut_icon" parent="." groups=["food_collision_shapes"] instance=ExtResource("10_uh486")]
+transform = Transform3D(1, 0, 0, 0, 0.227127, 0.973865, 0, -0.973865, 0.227127, 0.00874668, 1.2283, -2.38685)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("11_ueidp")
+
+[node name="paw" parent="." instance=ExtResource("12_688q1")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.337, -2.314)
+script = ExtResource("13_euj51")
+
+[node name="Food" type="Node3D" parent="." groups=["food_collision_shapes"]]
+
+[node name="BurgerIcon" parent="Food" groups=["food_collision_shapes"] instance=ExtResource("14_bspqo")]
+transform = Transform3D(1, 0, 0, 0, 0.201112, 0.979568, 0, -0.979568, 0.201112, -0.00772044, 3.63059, -1.95131)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("15_dc7ux")
+
+[node name="InnerLayer" parent="." instance=ExtResource("16_wl15c")]
+transform = Transform3D(1, 0, 0, 0, -0.258819, -0.965926, 0, 0.965926, -0.258819, 0, 2.33657, -2.31687)
+collision_layer = 5242881
+collision_mask = 5242881
+script = ExtResource("17_xeaav")
+
+[node name="Icecream" parent="." groups=["food_collision_shapes"] instance=ExtResource("18_f36jn")]
+transform = Transform3D(1, 0, 0, 0, 0.226294, 0.974059, 0, -0.974059, 0.226294, 0, 1.02877, -2.41851)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("19_q05v8")
+
+[node name="hotdog_icon" parent="." groups=["food_collision_shapes"] instance=ExtResource("20_5su8v")]
+transform = Transform3D(1, 0, 0, 0, 0.18021, 0.983628, 0, -0.983628, 0.18021, 0.0341189, -0.808148, -2.78038)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("21_4f8cx")
+
+[node name="soda_icon" parent="." groups=["food_collision_shapes"] instance=ExtResource("22_niqru")]
+transform = Transform3D(1, 0, 0, 0, 0.247117, 0.968986, 0, -0.968986, 0.247117, -0.0132668, 3.7088, -1.80687)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("23_2q5j1")
+
+[node name="waffle_icon" parent="." groups=["food_collision_shapes"] instance=ExtResource("24_8ne78")]
+transform = Transform3D(1, 0, 0, 0, 0.220493, 0.975389, 0, -0.975389, 0.220493, -0.0389421, 5.39726, -1.57043)
+collision_layer = 5242885
+collision_mask = 5242885
+script = ExtResource("25_6b48u")
