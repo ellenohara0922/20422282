@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://0kold2tdu82r"]
+
+[ext_resource type="PackedScene" uid="uid://cqyc6aca7ujxs" path="res://InnerRing/innerring_0.1.glb" id="1_tmg7p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8pox0"]
+size = Vector3(0.813354, 0.113403, 0.833984)
+
+[node name="InnerLayer" type="StaticBody3D"]
+
+[node name="innerring_0_1" parent="." instance=ExtResource("1_tmg7p")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435974, 0.0355835, -0.458984)
+shape = SubResource("BoxShape3D_8pox0")
