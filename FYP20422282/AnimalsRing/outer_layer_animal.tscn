@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://6uk3mchoelol"]
+
+[ext_resource type="PackedScene" uid="uid://0u654qjtsao1" path="res://AnimalsRing/Animalring.glb" id="1_li6xf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_b0rcd"]
+radius = 2.3476
+
+[node name="outer_layer_animal" type="StaticBody3D"]
+
+[node name="Animalring" parent="." instance=ExtResource("1_li6xf")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.999704, 0, -0.02431, 0, 1, 0, 0.02431, 0, 0.999704, 0, 0, 0)
+visible = false
+shape = SubResource("SphereShape3D_b0rcd")
