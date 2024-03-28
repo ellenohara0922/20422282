@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2fqgj2xxpoib"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i3ko2"]
+size = Vector3(0.936401, 0.141357, 0.749634)
+
+[node name="hotdog_icon" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.649795, 0.069458, 1.59481)
+shape = SubResource("BoxShape3D_i3ko2")

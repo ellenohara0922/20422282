@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf6invioel73w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kebuf"]
+size = Vector3(0.856323, 0.168427, 1)
+
+[node name="cupcake" type="StaticBody3D"]
+collision_mask = 5242881
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.868943, 0, -0.494913, 0, 1, 0, 0.494913, 0, 0.868943, -0.740164, 0.0641327, 1.57048)
+shape = SubResource("BoxShape3D_kebuf")

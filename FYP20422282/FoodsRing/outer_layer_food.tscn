@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcmu7k23er1vf"]
+
+[ext_resource type="PackedScene" uid="uid://c012dtvj417gs" path="res://OuterRingV_0.1.glb" id="1_5yxnq"]
+
+[node name="OuterLayerFood" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999627, 0.0272935, 0, -0.0272935, 0.999627, 0, 0, 0)
+
+[node name="OuterRingV_0_1" parent="." instance=ExtResource("1_5yxnq")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
