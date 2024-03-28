@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=2]
+
+[ext_resource path="res://textures/metal_046/Metal046B_1K_Color.jpg" type="Texture2D" id=1]
+[ext_resource path="res://textures/metal_046/Metal046B_1K_Metalness.jpg" type="Texture2D" id=2]
+[ext_resource path="res://textures/metal_046/Metal046B_1K_Roughness.jpg" type="Texture2D" id=4]
+
+[resource]
+albedo_texture = ExtResource( 1 )
+metallic_texture = ExtResource( 2 )
+roughness_texture = ExtResource( 4 )
